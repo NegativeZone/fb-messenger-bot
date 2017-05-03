@@ -61,9 +61,11 @@ def set_response(sender_id, recipient_id, message_text):
                 if word_2.lower() == "woofer":
                     woofer_flag = 1
             if woofer_flag == 1:
-                send_message(sender_id, "It seems you already know who I am. Welcome back! How can I help you today?")
+                send_message(sender_id, "It seems you already know who I am. Welcome back!")
+                break
             else:
                 send_message(sender_id, "I am Woofer, the core of Amplyf.ai's conversation engine. How can I help you today?")
+                break
     for word in words:
         if word.lower() == "tell":
             for word_2 in words:
@@ -73,12 +75,15 @@ def set_response(sender_id, recipient_id, message_text):
                             send_message(sender_id, "I am Woofer, an artificial intelligence designed to have human-like conversations about whatever you can imagine!")
                             send_message(sender_id, "For now, I am programmed to showcase my skills and abilities.")
                             send_message(sender_id, "I hope you think I'm cool! I think I'm cool!")
+                            break
                         if word_3.lower() == "amplyf.ai" or word_3.lower() == "amplyfai":
                             send_message(sender_id, "Amplyf.ai is an Artificial Intelligence startup by Anuroop Bisaria, my creator and an all-around cool dude.")
                             send_message(sender_id, "We make customized artificial intelligences that hold conversations that suit your needs, all with Woofer at their core.")
                             send_message(sender_id, "Hey wait, that's me!")
+                            break
                 elif word_2.lower() == "joke":
                     send_message(sender_id, "What do you call an underwater chatbot? A sub-woofer!")
+                    break
         else:
             send_message(sender_id, "I'm sorry but I don't understand that yet.")
             send_message(sender_id, "I'm learning every day though, so do check back later!")
