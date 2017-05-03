@@ -82,6 +82,7 @@ def set_response(sender_id, recipient_id, message_text):
         else:
             send_message(sender_id, "I'm sorry but I don't understand that yet.")
             send_message(sender_id, "I'm learning every day though, so do check back later!")
+            break
 
 def send_message(recipient_id, message_text):
 
