@@ -52,12 +52,15 @@ def webhook():
     return "ok", 200
 
 def set_response(sender_id, recipient_id, message_text):
-    words = message_text.split()
+    words = message_text.split() # Creates a list of words in the message
     for word in words:
         if word.lower() == "hi" or word.lower() == "hello":
-            send_message(sender_id, "Hello there! I am Woofer, the core of Amplyf.ai's conversation engine.")
-        if word.lower() == "woofer":
-            send_message(sender_id, "It seems you already know who I am! Welcome back!")
+            send_message(sender_id, "Hello there!")
+            for word_2 in words:
+                if word_2.lower() == "woofer":
+                    send_message(sender_id, "Hello! It seems you already know who I am! Welcome back! How can I help you today?")
+                else:
+                    send_message(sender_id, "I am Woofer, the core of Amplyf.ai's conversation engine. How can I help you today?")
     for word in words:
         if word.lower() == "tell":
             for word_2 in words:
