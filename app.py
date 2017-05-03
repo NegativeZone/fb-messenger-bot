@@ -79,6 +79,9 @@ def set_response(sender_id, recipient_id, message_text):
                             send_message(sender_id, "Hey wait, that's me!")
                 elif word_2.lower() == "joke":
                     send_message(sender_id, "What do you call an underwater chatbot? A sub-woofer!")
+        else:
+            send_message(sender_id, "I'm sorry but I don't understand that yet.")
+            send_message(sender_id, "I'm learning every day though, so do check back later!")
 
 def send_message(recipient_id, message_text):
 
