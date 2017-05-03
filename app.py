@@ -55,24 +55,24 @@ def set_response(sender_id, recipient_id, message_text):
     words = message_text.split()
     for word in words:
         if word.lower() == "hi" or word.lower() == "hello":
-            send_message(recipient_id, "Hello there! I am Woofer, the core of Amplyf.ai's conversation engine.")
+            send_message(sender_id, "Hello there! I am Woofer, the core of Amplyf.ai's conversation engine.")
         if word.lower() == "woofer":
-            send_message(recipient_id, "It seems you already know who I am! Welcome back!")
+            send_message(sender_id, "It seems you already know who I am! Welcome back!")
     for word in words:
         if word.lower() == "tell":
             for word_2 in words:
                 if word_2.lower() == "about":
                     for word_3 in words:
                         if word_3.lower() == "you":
-                            send_message(recipient_id, "I am Woofer, an artificial intelligence designed to have human-like conversations about whatever you can imagine!")
-                            send_message(recipient_id, "For now, I am programmed to showcase my skills and abilities.")
-                            send_message(recipient_id, "I hope you think I'm cool! I think I'm cool!")
+                            send_message(sender_id, "I am Woofer, an artificial intelligence designed to have human-like conversations about whatever you can imagine!")
+                            send_message(sender_id, "For now, I am programmed to showcase my skills and abilities.")
+                            send_message(sender_id, "I hope you think I'm cool! I think I'm cool!")
                         if word_3.lower() == "amplyf.ai" or word_3.lower() == "amplyfai":
-                            send_message(recipient_id, "Amplyf.ai is an Artificial Intelligence startup by Anuroop Bisaria, my creator and an all-around cool dude.")
-                            send_message(recipient_id, "We make customized artificial intelligences that hold conversations that suit your needs, all with Woofer at their core.")
-                            send_message(recipient_id, "Hey wait, that's me!")
+                            send_message(sender_id, "Amplyf.ai is an Artificial Intelligence startup by Anuroop Bisaria, my creator and an all-around cool dude.")
+                            send_message(sender_id, "We make customized artificial intelligences that hold conversations that suit your needs, all with Woofer at their core.")
+                            send_message(sender_id, "Hey wait, that's me!")
                 elif word_2.lower() == "joke":
-                    send_message(recipient_id, "What do you call an underwater chatbot? A sub-woofer!")
+                    send_message(sender_id, "What do you call an underwater chatbot? A sub-woofer!")
 
 def send_message(recipient_id, message_text):
 
