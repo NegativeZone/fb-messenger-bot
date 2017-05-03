@@ -84,7 +84,7 @@ def set_response(sender_id, recipient_id, message_text):
                 elif word_2.lower() == "joke":
                     send_message(sender_id, "What do you call an underwater chatbot? A sub-woofer!")
                     break
-        elif word.lower() != "hi" or word.lower() != "hello":
+        elif word.lower() != "hi" and word.lower() != "hello":
             send_message(sender_id, "I'm sorry but I don't understand that yet.")
             send_message(sender_id, "I'm learning every day though, so do check back later!")
             break
